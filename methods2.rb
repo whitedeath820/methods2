@@ -42,7 +42,6 @@ module Methods2
 		end
 	end
 
-	# TODO - write in_order?
 	def in_order?(a, b, c, bOk)
 		if bOk == false
 			c > b && b > a
@@ -51,13 +50,23 @@ module Methods2
 		end
 	end
 
-	# TODO - write less_by_ten?
 	def less_by_ten?(a, b, c)
 		(a -= b).abs == 10 || (a -= c).abs == 10 || (b -= c).abs == 10
 	end
 	
 	# TODO - write fizz_string
-
+	def fizz_string(str)
+		if str[0] == 'f' && str.reverse[0] == 'b'
+			return fizzbuzz
+		elsif str.reverse[0] == 'b'
+			return "buzz"
+		elsif str[0] == 'f'
+			return "fizzbuzz"
+		else
+			return str
+		end
+				
+	end
 	# TODO - write first_last_six?
 
 	# TODO - write rotate_left

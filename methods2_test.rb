@@ -54,4 +54,9 @@ class Methods2Test < MiniTest::Test
 		assert_equal false, @m.less_by_ten?(122, 3, 44)
 		
 	end
+
+	def test_fizz_string
+		assert_equal "buzz", @m.fizz_string("hib")
+		
+	end
 end
