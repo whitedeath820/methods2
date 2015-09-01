@@ -1,16 +1,60 @@
 module Methods2
 	
-	# TODO - write elevenish?
+	def elevenish?(n)
+		if n == 1 || n == 0
+			false
+		elsif n % 11 == 0 || (n - 1) % 11 == 0
+			true
+		else
+			false
+		end
+	end
 	
-	# TODO - write ice_cream_party?
+	def ice_cream_party(ice, candy)
+		if ice + candy < 5
+			return 0
+		elsif ice >= 2 * candy || candy >= 2 * ice
+			return 2
+		else
+			return 1
+		end
+	end
 	
-	# TODO - write successful_squirrel_party?
+	def squirrel_party?(weekend, nuts)
+		if nuts >= 40
+			if nuts <= 60 || weekend
+				return true
+			end
+		end
+		return false
+	end
 	
-	# TODO - write ticket
+	def ticket(a, b, c)
+		ab = a + b
+		ac = a + c
+		bc = b + c
+		if ab == 10 || ac == 10 || bc == 10
+			return 10
+		elsif ab - 10 == ac || ab - 10 == bc
+			return 5
+		else
+			return 0
+		end
+	end
 
 	# TODO - write in_order?
+	def in_order?(a, b, c, bOk)
+		if bOk == false
+			c > b && b > a
+		else
+			c > b
+		end
+	end
 
 	# TODO - write less_by_ten?
+	def less_by_ten?(a, b, c)
+		(a -= b).abs == 10 || (a -= c).abs == 10 || (b -= c).abs == 10
+	end
 	
 	# TODO - write fizz_string
 
@@ -19,5 +63,4 @@ module Methods2
 	# TODO - write rotate_left
 
 	# TODO - write double23?
-
 end
