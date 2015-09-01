@@ -57,11 +57,11 @@ module Methods2
 	# TODO - write fizz_string
 	def fizz_string(str)
 		if str[0] == 'f' && str.reverse[0] == 'b'
-			return fizzbuzz
+			return "fizzbuzz"
 		elsif str.reverse[0] == 'b'
 			return "buzz"
 		elsif str[0] == 'f'
-			return "fizzbuzz"
+			return "fizz"
 		else
 			return str
 		end

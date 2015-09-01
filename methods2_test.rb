@@ -57,6 +57,8 @@ class Methods2Test < MiniTest::Test
 
 	def test_fizz_string
 		assert_equal "buzz", @m.fizz_string("hib")
+		assert_equal "fizzbuzz", @m.fizz_string("fib")
+		assert_equal "aie", @m.fizz_string("aie")
 		
 	end
 end
