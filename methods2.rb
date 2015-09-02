@@ -73,7 +73,8 @@ module Methods2
 
 	# TODO - write rotate_left
 	def rotate_left(a, b, c)
-		
+		arr = [b, c, a]
+		return arr
 	end
 
 	# TODO - write double23?

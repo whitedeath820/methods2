@@ -59,12 +59,15 @@ class Methods2Test < MiniTest::Test
 		assert_equal "fizzbuzz", @m.fizz_string("fib")
 		assert_equal "aie", @m.fizz_string("aie")
 	end
+
 	def test_first_last_six
 		assert_equal true, @m.first_last_six(1, 3, 6)
 		assert_equal true, @m.first_last_six(6, 3, 6)
 		assert_equal false, @m.first_last_six(1, 6, 0)
 		assert_equal true, @m.first_last_six(6, 0, 0)
+	end
 
-
+	def test_rotate_left
+		assert_equal [2, 3, 1], @m.rotate_left(1, 2, 3)
 	end
 end
