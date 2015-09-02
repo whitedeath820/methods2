@@ -46,7 +46,6 @@ class Methods2Test < MiniTest::Test
 	def test_in_order?
 		assert_equal true, @m.in_order?(1, 2, 3, false)
 		assert_equal true, @m.in_order?(3, 2, 3, true)
-		
 	end
 
 	def test_less_by_ten?
@@ -59,6 +58,13 @@ class Methods2Test < MiniTest::Test
 		assert_equal "buzz", @m.fizz_string("hib")
 		assert_equal "fizzbuzz", @m.fizz_string("fib")
 		assert_equal "aie", @m.fizz_string("aie")
-		
+	end
+	def test_first_last_six
+		assert_equal true, @m.first_last_six(1, 3, 6)
+		assert_equal true, @m.first_last_six(6, 3, 6)
+		assert_equal false, @m.first_last_six(1, 6, 0)
+		assert_equal true, @m.first_last_six(6, 0, 0)
+
+
 	end
 end

@@ -51,10 +51,9 @@ module Methods2
 	end
 
 	def less_by_ten?(a, b, c)
-		(a -= b).abs == 10 || (a -= c).abs == 10 || (b -= c).abs == 10
+		(a - b).abs == 10 || (a - c).abs == 10 || (b - c).abs == 10
 	end
 	
-	# TODO - write fizz_string
 	def fizz_string(str)
 		if str[0] == 'f' && str.reverse[0] == 'b'
 			return "fizzbuzz"
@@ -64,12 +63,18 @@ module Methods2
 			return "fizz"
 		else
 			return str
-		end
-				
+		end	
 	end
-	# TODO - write first_last_six?
+
+	def first_last_six(a, b, c)
+		arr = [a, b, c]
+		arr[0] == 6 || arr.reverse[0] == 6
+	end
 
 	# TODO - write rotate_left
+	def rotate_left(a, b, c)
+		
+	end
 
 	# TODO - write double23?
 end
